@@ -61,12 +61,6 @@ masterpptlist$NormAvg <- (masterpptlist$RCWomenContribute + masterpptlist$RCFrie
 men.data <- data.frame(subset(masterpptlist, Gender == 0))
 women.data <- data.frame(subset(masterpptlist, Gender == 1))
 
-Zeromen.data <- data.frame(subset(masterpptlist, Condition == 0))
-TwentyFivemen.data <- data.frame(subset(masterpptlist, Condition == 3))
-Fiftymen.data <- data.frame(subset(masterpptlist, Condition == 6))
-SeventyFivemen.data <- data.frame(subset(masterpptlist, Condition == 9))
-Onehundredmen.data <- data.frame(subset(masterpptlist, Condition == 12))
-
 #Perceived Sex Ratio of the group#
 mod1 <- lmer(Ratio ~ 1 + (1|Participant), data=masterpptlist)
 summary(mod1)
