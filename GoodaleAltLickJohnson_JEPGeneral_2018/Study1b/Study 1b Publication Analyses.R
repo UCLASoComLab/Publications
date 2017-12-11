@@ -6,6 +6,7 @@ library(lme4)
 library(cowplot)
 library(ggplot2)
 
+#need to run multilevel_effect_size_function.R first in order to get effect sizes in code below#
 #Read in Data
 masterpptlist <- read.csv("~/repos/Publications/GoodaleAltLickJohnson_JEPGeneral_2018/Study1b/Goodale_Data_Study1b.csv",
            header=TRUE)
