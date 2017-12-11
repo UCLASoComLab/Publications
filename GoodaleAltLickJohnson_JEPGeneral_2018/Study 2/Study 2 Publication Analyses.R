@@ -3,7 +3,6 @@ library(ggplot2)
 library(cowplot)
 detach("package:lmerTest", unload=TRUE)
 
-
 masterpptlist <- read.csv("~/repos/Publications/GoodaleAltLickJohnson_JEPGeneral_2018/Study 2/Goodale_Data_Study2.csv", header = TRUE)
 masterpptlist[,1] <- NULL
 
@@ -66,3 +65,8 @@ summary(med.out)
 med.out <- mediate(med.fit, out.fit, treat = "actual_same_sex", mediator = "same_sex_ratio", 
                    control.value = 0, treat.value = 12, sims = 10000)
 summary(med.out)
+
+#Analysis for over all mediation model pathways used in Figure 5#
+summary(med.fit)
+summary(out.fit)
+
